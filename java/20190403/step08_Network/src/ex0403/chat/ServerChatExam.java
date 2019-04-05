@@ -23,13 +23,19 @@ public class ServerChatExam {
 			//받는 스레드
 			new Thread() {
 				public void run() {
+<<<<<<< HEAD
 					BufferedReader br = null;
 					try {
 						br = new BufferedReader(new InputStreamReader(sk.getInputStream()));
+=======
+					try {
+						BufferedReader br = new BufferedReader(new InputStreamReader(sk.getInputStream()));
+>>>>>>> 2ed018e293ed90025adaa93aa37e7d632ca2780c
 						
 						while(true) {
 							String msg = br.readLine();
 							if(msg==null) break;
+<<<<<<< HEAD
 							System.out.println(msg);
 						}
 					} catch (IOException e) {
@@ -43,6 +49,12 @@ public class ServerChatExam {
 						} catch (IOException e) {
 							e.printStackTrace();
 						}
+=======
+							System.out.println();
+						}
+					} catch (IOException e) {
+						e.printStackTrace();
+>>>>>>> 2ed018e293ed90025adaa93aa37e7d632ca2780c
 					}
 				};
 			}.start();

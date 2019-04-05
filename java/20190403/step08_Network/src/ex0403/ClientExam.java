@@ -14,7 +14,11 @@ public class ClientExam {
 			//연결했으면 데이터를 보내보자
 			
 			PrintWriter pw = new PrintWriter(sk.getOutputStream(),true);
+<<<<<<< HEAD
 			pw.println("gdgd");
+=======
+			pw.println("");
+>>>>>>> 2ed018e293ed90025adaa93aa37e7d632ca2780c
 			
 			//서버가 보내오는 내용을 읽기
 			BufferedReader br = new BufferedReader(new InputStreamReader(sk.getInputStream()));

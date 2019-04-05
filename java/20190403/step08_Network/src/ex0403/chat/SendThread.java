@@ -23,6 +23,7 @@ public class SendThread extends Thread {
 		
 		
 		Scanner sc = new Scanner(System.in); // 키보드 입력 준비
+<<<<<<< HEAD
 		PrintWriter pw = null;
 		try {
 			pw = new PrintWriter(sk.getOutputStream(),true);
@@ -32,11 +33,20 @@ public class SendThread extends Thread {
 					pw.println(msg);
 					break;
 				}
+=======
+		
+		try {
+			PrintWriter pw = new PrintWriter(sk.getOutputStream(),true);
+			while(true) {
+				String msg = sc.nextLine();
+				if(msg.equals("exit")) break;
+>>>>>>> 2ed018e293ed90025adaa93aa37e7d632ca2780c
 				pw.println("["+name+"] : "+msg);
 				pw.flush();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+<<<<<<< HEAD
 			System.out.println(name+"의 오류 발생!");
 		} finally {
 			pw.close();
@@ -46,6 +56,8 @@ public class SendThread extends Thread {
 				e.printStackTrace();
 				System.out.println(name+"의 close 오류 발생!");
 			}
+=======
+>>>>>>> 2ed018e293ed90025adaa93aa37e7d632ca2780c
 		}
 		super.run();
 	}
