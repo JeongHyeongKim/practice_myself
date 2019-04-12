@@ -16,12 +16,14 @@
 DNS SERVER 만들기 
 -------------------
 
-yum install pdns pdns-recursor httpd pdns-backend-mysql mariadb-server
-yum -y install php-cli php-pdo php-mcrypt php-common php-mysql php
- rpm -qa | grep pdns
-power admin 다운 받고
+	yum install pdns pdns-recursor httpd pdns-backend-mysql mariadb-server -> pdns에 패키지와 마리아디비 설치
 
-tar xzf로 압출 푼다
+	yum -y install php-cli php-pdo php-mcrypt php-common php-mysql php -> pdns에 필요한 php설치
+
+	 rpm -qa | grep pdns -> pdns패키지 깔렸는지 확인 
+ 
+ 
+위 명령어로 power admin 다운 받고 tar xzf 파일명 으로 압축 푼다
 
 poweradmin폴더를 /var/www/html로 옮긴다.
 옮겨서 curl명령어로 poweradmin/index.php를 실행하면 403 Error가 뜬다.
