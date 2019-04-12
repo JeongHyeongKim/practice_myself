@@ -1,47 +1,48 @@
 # INFRA - 20190412
 
-ÀÎ½ºÅÏ½º »èÁ¦ ÈÄ ±âÁ¸ Á¸ÀçÇÏ´ø º¼·ý¿¡ ÀÎ½ºÅÏ½º ¿¬°áÇÏ¸é ÀåÄ¡ È£È¯ÀÌ ¾È¸Â±â ¶§¹®¿¡ ¾ÈµÉ¼öµµ ÀÖ´Ù.
+ì¸ìŠ¤í„´ìŠ¤ ì‚­ì œ í›„ ê¸°ì¡´ ì¡´ìž¬í•˜ë˜ ë³¼ë¥¨ì— ì¸ìŠ¤í„´ìŠ¤ ì—°ê²°í•˜ë©´ ìž¥ì¹˜ í˜¸í™˜ì´ ì•ˆë§žê¸° ë•Œë¬¸ì— ì•ˆë ìˆ˜ë„ ìžˆë‹¤.
 
-ÀÌ·² °æ¿ì¸¦ ´ëºñÇØ ¸®´ª½º¿¡¼­ º¹±¸ ÅøÀ» Á¦°øÇÑ´Ù. ºñ¹øÄ¡¸é µ¥ÀÌÅÍ´Â º¹±¸µÈ´Ù. 
+ì´ëŸ´ ê²½ìš°ë¥¼ ëŒ€ë¹„í•´ ë¦¬ëˆ…ìŠ¤ì—ì„œ ë³µêµ¬ íˆ´ì„ ì œê³µí•œë‹¤. ë¹„ë²ˆì¹˜ë©´ ë°ì´í„°ëŠ” ë³µêµ¬ëœë‹¤. 
 
 
-¾îÁ¦ÇÑ°Å »èÁ¦ÇÏ±â
+ì–´ì œí•œê±° ì‚­ì œí•˜ê¸°
 -------------------
-ÇÑ°Å ¾Æ±õÁö¸¸ »èÁ¦ÇÏÀÚ. ±×³É ¸¸µå´Â ÇÁ·Î¼¼½º ¹Ý´ë·Î ÇÏ¸é µÈ´Ù.
-¶ó¿ìÅÍ »èÁ¦ÇÒ¶§´Â ²À ÀÎÅÍÆäÀÌ½º ¸ÕÀú »èÁ¦ÇÏ°í ¶ó¿ìÅÍ¸¦ »èÁ¦ÇØ¾ßÇÑ´Ù. ¾È±×·¯¸é ¿¡·¯³².
+í•œê±° ì•„ê¹ì§€ë§Œ ì‚­ì œí•˜ìž. ê·¸ëƒ¥ ë§Œë“œëŠ” í”„ë¡œì„¸ìŠ¤ ë°˜ëŒ€ë¡œ í•˜ë©´ ëœë‹¤.
+ë¼ìš°í„° ì‚­ì œí• ë•ŒëŠ” ê¼­ ì¸í„°íŽ˜ì´ìŠ¤ ë¨¼ì € ì‚­ì œí•˜ê³  ë¼ìš°í„°ë¥¼ ì‚­ì œí•´ì•¼í•œë‹¤. ì•ˆê·¸ëŸ¬ë©´ ì—ëŸ¬ë‚¨.
 
 
 
-
+DNS SERVER 
+-------------------
 yum install pdns pdns-recursor httpd pdns-backend-mysql mariadb-server
 yum -y install php-cli php-pdo php-mcrypt php-common php-mysql php
  rpm -qa | grep pdns
-power admin ´Ù¿î ¹Þ°í
+power admin ë‹¤ìš´ ë°›ê³ 
 
-tar xzf·Î ¾ÐÃâ Ç¬´Ù
+tar xzfë¡œ ì••ì¶œ í‘¼ë‹¤
 
-poweradminÆú´õ¸¦ /var/www/html·Î ¿Å±ä´Ù.
-¿Å°Ü¼­ curl¸í·É¾î·Î poweradmin/index.php¸¦ ½ÇÇàÇÏ¸é 403 Error°¡ ¶á´Ù.
-ÀÌ¹ø °æ¿ìµµ SELINUX°¡ ½ÇÇàµÇ°í ÀÖ±â ¶§¹®¿¡, º¸¾È±×·ìÀÌ ´Ù¸£´Ù´Â °ÍÀ» ls -alZ·Î È®ÀÎ °¡´ÉÇÏ´Ù.
+poweradminí´ë”ë¥¼ /var/www/htmlë¡œ ì˜®ê¸´ë‹¤.
+ì˜®ê²¨ì„œ curlëª…ë ¹ì–´ë¡œ poweradmin/index.phpë¥¼ ì‹¤í–‰í•˜ë©´ 403 Errorê°€ ëœ¬ë‹¤.
+ì´ë²ˆ ê²½ìš°ë„ SELINUXê°€ ì‹¤í–‰ë˜ê³  ìžˆê¸° ë•Œë¬¸ì—, ë³´ì•ˆê·¸ë£¹ì´ ë‹¤ë¥´ë‹¤ëŠ” ê²ƒì„ ls -alZë¡œ í™•ì¸ ê°€ëŠ¥í•˜ë‹¤.
 
 	drwxr-xr-x. root   root   system_u:object_r:httpd_sys_content_t:s0 .
 	drwxr-xr-x. root   root   system_u:object_r:httpd_sys_content_t:s0 ..
 	drwxrwxr-x. apache apache unconfined_u:object_r:default_t:s0 poweradmin
 
-ÀÌ¸¦ ¹Ù²ãÁÖ±â À§ÇØ chcon -R --reference=/var/www/html/ poweradmin ¸¦ ÀÔ·ÂÇÏ¸é,
+ì´ë¥¼ ë°”ê¿”ì£¼ê¸° ìœ„í•´ chcon -R --reference=/var/www/html/ poweradmin ë¥¼ ìž…ë ¥í•˜ë©´,
 
 	drwxr-xr-x. root   root   system_u:object_r:httpd_sys_content_t:s0 .
 	drwxr-xr-x. root   root   system_u:object_r:httpd_sys_content_t:s0 ..
 	drwxrwxr-x. apache apache system_u:object_r:httpd_sys_content_t:s0 poweradmin
 
-´ÙÀ½°ú °°ÀÌ º¸¾È±×·ìÀÌ ¹Ù²ï °ÍÀ» ¾Ë ¼ö ÀÖ´Ù.
+ë‹¤ìŒê³¼ ê°™ì´ ë³´ì•ˆê·¸ë£¹ì´ ë°”ë€ ê²ƒì„ ì•Œ ìˆ˜ ìžˆë‹¤.
 
-±×´ÙÀ½, ÆÄ¿ö¾îµå¹Î¿¡ Á¢¼ÓÇÏ¸é, 	
-»¡°£È­¸éÀÌ ¶ß´Âµ¥, ÀÌ¸¦ À§ÇØ µ¥ÀÌÅÍº£ÀÌ½º¸¦ ¸¸µé¾îÁÖÀÚ.
+ê·¸ë‹¤ìŒ, íŒŒì›Œì–´ë“œë¯¼ì— ì ‘ì†í•˜ë©´, 	
+ë¹¨ê°„í™”ë©´ì´ ëœ¨ëŠ”ë°, ì´ë¥¼ ìœ„í•´ ë°ì´í„°ë² ì´ìŠ¤ë¥¼ ë§Œë“¤ì–´ì£¼ìž.
 mysql_secure_installation
-ÇÏ°í rootºñ¹ø »ý¼ºÇÑ µÚ, µðÆúÆ®·Î ´Ù »ý¼ºÇÑ´Ù (¿£ÅÍ ±¤Å¬)
+í•˜ê³  rootë¹„ë²ˆ ìƒì„±í•œ ë’¤, ë””í´íŠ¸ë¡œ ë‹¤ ìƒì„±í•œë‹¤ (ì—”í„° ê´‘í´)
 
-mysql -u root -pÇÏ¸é ´ÙÀ½°ú °°ÀÌ DBÄÜ¼ÖÀÌ ¶á´Ù.
+mysql -u root -pí•˜ë©´ ë‹¤ìŒê³¼ ê°™ì´ DBì½˜ì†”ì´ ëœ¬ë‹¤.
 
 	Enter password:
 	Welcome to the MariaDB monitor.  Commands end with ; or \g.
@@ -54,61 +55,61 @@ mysql -u root -pÇÏ¸é ´ÙÀ½°ú °°ÀÌ DBÄÜ¼ÖÀÌ ¶á´Ù.
 
 	MariaDB [(none)]>
 
-ÄÜ¼ÖÃ¢¿¡´Ù°¡ 
+ì½˜ì†”ì°½ì—ë‹¤ê°€ 
 
 	create database pdns
 	grant all privilieges on pdns.* to 'pdns'@'locathost' identified by '~~~~~~';
 	flush privilieges;
 
-ÃÄ¼­ pdns¿¡ ¾µ µ¥ÀÌÅÍº£ÀÌ½º¿Í »ç¿ëÀÚ¸¦ »ý¼ºÇÑ´Ù.
+ì³ì„œ pdnsì— ì“¸ ë°ì´í„°ë² ì´ìŠ¤ì™€ ì‚¬ìš©ìžë¥¼ ìƒì„±í•œë‹¤.
 
-»ý¼ºÇÑ ´ÙÀ½, public_IP/poweradmin/install µå°¡¼­
-step3 -> ÀÚ±â°¡ ¸¸µç pdns°èÁ¤°ú pdns µ¥ÀÌÅÍº£ÀÌ½º Á¤º¸¸¦ ´Ù ÀÔ·ÂÇÑ´Ù. 
-step4 -> ¾ÕÀ¸·Î »ç¿ëÇÒ poweradmin userÀÇ Á¤º¸¸¦ ±âÀÔÇÑ´Ù.
-step5 -> ½ºÅµ
-step6 -> ³»¿ëµéÀ» º¹»çÇØ³õÀÚ.
+ìƒì„±í•œ ë‹¤ìŒ, public_IP/poweradmin/install ë“œê°€ì„œ
+step3 -> ìžê¸°ê°€ ë§Œë“  pdnsê³„ì •ê³¼ pdns ë°ì´í„°ë² ì´ìŠ¤ ì •ë³´ë¥¼ ë‹¤ ìž…ë ¥í•œë‹¤. 
+step4 -> ì•žìœ¼ë¡œ ì‚¬ìš©í•  poweradmin userì˜ ì •ë³´ë¥¼ ê¸°ìž…í•œë‹¤.
+step5 -> ìŠ¤í‚µ
+step6 -> ë‚´ìš©ë“¤ì„ ë³µì‚¬í•´ë†“ìž.
 
-´Ù½Ã ÅÍ¹Ì³Î Ã¢ °¡¼­ 
+ë‹¤ì‹œ í„°ë¯¸ë„ ì°½ ê°€ì„œ 
 cp -a config-me.inc.php  config.inc.php
 
 vi config.inc.php
-ÇÑ ´ÙÀ½ µ¤¾î¾²±â ÇÏÀÚ.
+í•œ ë‹¤ìŒ ë®ì–´ì“°ê¸° í•˜ìž.
 
-db_user¿Í db_password¸¦ ¾Æ±î ¸¸µé¾ú´ø pdns°èÁ¤°ú µ¿ÀÏÇÏ°Ô ¸¸µé¾îÁØ´Ù.
+db_userì™€ db_passwordë¥¼ ì•„ê¹Œ ë§Œë“¤ì—ˆë˜ pdnsê³„ì •ê³¼ ë™ì¼í•˜ê²Œ ë§Œë“¤ì–´ì¤€ë‹¤.
 
-±×´ÙÀ½,  mv install/ install_bak ÀÔ·ÂÇÑ´Ù.
+ê·¸ë‹¤ìŒ,  mv install/ install_bak ìž…ë ¥í•œë‹¤.
 
-±×´ÙÀ½,  public_IP/poweradmin/    µé¾î°¡¸é,  ´ÙÀ½°ú °°ÀÌ ¶á´Ù.
-»çÁø2
+ê·¸ë‹¤ìŒ,  public_IP/poweradmin/    ë“¤ì–´ê°€ë©´,  ë‹¤ìŒê³¼ ê°™ì´ ëœ¬ë‹¤.
+ì‚¬ì§„2
 
 	username : admin
-	password : config.inc.php ÀÛ¼ºÇÒ ¶§ ¸¸µç user_password
+	password : config.inc.php ìž‘ì„±í•  ë•Œ ë§Œë“  user_password
 
-´ÙÀ½°ú °°Àº Á¤º¸¸¦ ÀÔ·ÂÇÏ¸é, ÀÌ·± È­¸éÀÌ ¶ã °ÍÀÌ´Ù.
-»çÁø3
+ë‹¤ìŒê³¼ ê°™ì€ ì •ë³´ë¥¼ ìž…ë ¥í•˜ë©´, ì´ëŸ° í™”ë©´ì´ ëœ° ê²ƒì´ë‹¤.
+ì‚¬ì§„3
 
 
-±× ´ÙÀ½, List Zone ¸Þ´º¿¡ µå°¡¼­ ´ÙÀ½À» ÀÛ¼ºÇÑ´Ù.
+ê·¸ ë‹¤ìŒ, List Zone ë©”ë‰´ì— ë“œê°€ì„œ ë‹¤ìŒì„ ìž‘ì„±í•œë‹¤.
 	
 	Name			Type		content
 
-	»ç¹ø			NS			ns.»ç¹ø.ÁÖ¾îÁö´Â ÁÖ¼Ò
-	»ç¹ø			A				ÆÛºí¸¯ÁÖ¼Ò
-	»ç¹ø			A				ÆÛºí¸¯ÁÖ¼Ò
-	www.»ç¹ø		CNAME		ns.»ç¹ø.ÁÖ¾îÁö´Â ÁÖ¼Ò
+	ì‚¬ë²ˆ			NS			ns.ì‚¬ë²ˆ.ì£¼ì–´ì§€ëŠ” ì£¼ì†Œ
+	ì‚¬ë²ˆ			A				í¼ë¸”ë¦­ì£¼ì†Œ
+	ì‚¬ë²ˆ			A				í¼ë¸”ë¦­ì£¼ì†Œ
+	www.ì‚¬ë²ˆ		CNAME		ns.ì‚¬ë²ˆ.ì£¼ì–´ì§€ëŠ” ì£¼ì†Œ
 
 
-À§¿Í °°ÀÌ Ãß°¡ÇÏÀÚ.
+ìœ„ì™€ ê°™ì´ ì¶”ê°€í•˜ìž.
 
-´ÙÀ½, ÃÖÁ¾ÀûÀ¸·Î ¼³Á¤À» Ãß°¡ÇÏ±â À§ÇØ vi¿¡µðÅÍ·Î /etc/pdns/pdns.conf¸¦ ¿¬´Ù.
-shift + G¸¦ ÇÏ¸é ¸Ç ¹Ø¿¡ ³»·Á°¡´Âµ¥, °Å±â´Ù°¡ ÀÌ°Å ¶§·Á³ÖÀÚ.
+ë‹¤ìŒ, ìµœì¢…ì ìœ¼ë¡œ ì„¤ì •ì„ ì¶”ê°€í•˜ê¸° ìœ„í•´ viì—ë””í„°ë¡œ /etc/pdns/pdns.confë¥¼ ì—°ë‹¤.
+shift + Gë¥¼ í•˜ë©´ ë§¨ ë°‘ì— ë‚´ë ¤ê°€ëŠ”ë°, ê±°ê¸°ë‹¤ê°€ ì´ê±° ë•Œë ¤ë„£ìž.
 
 	launch=gmysql
 	gmysql-host=127.0.0.1
 	gmysql-port=3306
 	gmysql-dbname=pdns
 	gmysql-user=pdns
-	gmysql-password=ÀÚ½ÅÀÌ Ã³À½¿¡ ¸¸µç »ç¿ëÀÚºñ¹ø
+	gmysql-password=ìžì‹ ì´ ì²˜ìŒì— ë§Œë“  ì‚¬ìš©ìžë¹„ë²ˆ
 	gmysql-dnssec=no
 	gmysql-timeout=600
 
