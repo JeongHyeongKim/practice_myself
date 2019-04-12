@@ -41,7 +41,7 @@ poweradmin폴더를 /var/www/html로 옮긴다.
 
 그다음, 파워어드민에 접속하면, 	
 
-![1](./../../img/infra/1.JPG)
+![1](./../../img/Infra/1.JPG)
 빨간화면이 뜨는데, 이를 위해 데이터베이스를 만들어주자.
 mysql_secure_installation
 하고 root비번 생성한 뒤, 디폴트로 다 생성한다 (엔터 광클)
@@ -85,13 +85,13 @@ db_user와 db_password를 아까 만들었던 pdns계정과 동일하게 만들�
 그다음,  mv install/ install_bak 입력한다.
 
 그다음,  public_IP/poweradmin/    들어가면,  다음과 같이 뜬다.
-![2](./../../img/infra/2.JPG)
+![2](./../../img/Infra/2.JPG)
 
 	username : admin
 	password : config.inc.php 작성할 때 만든 user_password
 
 다음과 같은 정보를 입력하면, 이런 화면이 뜰 것이다.
-![3](./../../img/infra/3.JPG)
+![3](./../../img/Infra/3.JPG)
 
 그 다음, List Zone 메뉴에 드가서 다음을 작성한다.
 	
@@ -117,7 +117,7 @@ shift + G를 하면 맨 밑에 내려가는데, 거기다가 이거 때려넣자
 
 다음과 같이 인스턴스가 속한 보안 그룹에서 인바운드 UDP port 53와 DNS(인바운드 TCP port 53)를  허용한다.
 
-![4](./../../img/infra/4.JPG)
+![4](./../../img/Infra/4.JPG)
 
 
 허용한 다음, nslookup으로 들어가서 PowerAdmin에서 만든 자신이 만든 Name를 입력해보자. 
