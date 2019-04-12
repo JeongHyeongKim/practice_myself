@@ -12,7 +12,7 @@
 
 
 
-DNS SERVER 
+DNS SERVER 만들
 -------------------
 yum install pdns pdns-recursor httpd pdns-backend-mysql mariadb-server
 yum -y install php-cli php-pdo php-mcrypt php-common php-mysql php
