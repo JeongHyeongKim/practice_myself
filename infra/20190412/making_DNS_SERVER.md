@@ -12,8 +12,12 @@
 
 
 
+<<<<<<< HEAD
+
+=======
 DNS SERVER 만들기 
 -------------------
+>>>>>>> 473a8cb33c63f0ff2387847192d57ad29e5188ea
 yum install pdns pdns-recursor httpd pdns-backend-mysql mariadb-server
 yum -y install php-cli php-pdo php-mcrypt php-common php-mysql php
  rpm -qa | grep pdns
@@ -38,6 +42,8 @@ poweradmin폴더를 /var/www/html로 옮긴다.
 다음과 같이 보안그룹이 바뀐 것을 알 수 있다.
 
 그다음, 파워어드민에 접속하면, 	
+
+![1](../../img/infra/1.JPG)
 빨간화면이 뜨는데, 이를 위해 데이터베이스를 만들어주자.
 mysql_secure_installation
 하고 root비번 생성한 뒤, 디폴트로 다 생성한다 (엔터 광클)
@@ -61,6 +67,7 @@ mysql -u root -p하면 다음과 같이 DB콘솔이 뜬다.
 	grant all privilieges on pdns.* to 'pdns'@'locathost' identified by '~~~~~~';
 	flush privilieges;
 
+
 쳐서 pdns에 쓸 데이터베이스와 사용자를 생성한다.
 
 생성한 다음, public_IP/poweradmin/install 드가서
@@ -80,14 +87,13 @@ db_user와 db_password를 아까 만들었던 pdns계정과 동일하게 만들�
 그다음,  mv install/ install_bak 입력한다.
 
 그다음,  public_IP/poweradmin/    들어가면,  다음과 같이 뜬다.
-사진2
+![2](../../img/infra/2.JPG)
 
 	username : admin
 	password : config.inc.php 작성할 때 만든 user_password
 
 다음과 같은 정보를 입력하면, 이런 화면이 뜰 것이다.
-사진3
-
+![3](../../img/infra/3.JPG)
 
 그 다음, List Zone 메뉴에 드가서 다음을 작성한다.
 	
@@ -97,8 +103,6 @@ db_user와 db_password를 아까 만들었던 pdns계정과 동일하게 만들�
 	사번			A				퍼블릭주소
 	사번			A				퍼블릭주소
 	www.사번		CNAME		ns.사번.주어지는 주소
-
-
 위와 같이 추가하자.
 
 다음, 최종적으로 설정을 추가하기 위해 vi에디터로 /etc/pdns/pdns.conf를 연다.
@@ -113,3 +117,13 @@ shift + G를 하면 맨 밑에 내려가는데, 거기다가 이거 때려넣자
 	gmysql-dnssec=no
 	gmysql-timeout=600
 
+다음과 같이 인스턴스가 속한 보안 그룹에서 인바운드 UDP port 53와 DNS(인바운드 TCP port 53)를  허용한다.
+
+![4](../../img/infra/4.JPG)
+
+
+허용한 다음, nslookup으로 들어가서 PowerAdmin에서 만든 자신이 만든 Name를 입력해보자. 
+
+	Non-existent domain
+
+이 에러만 아니고 자신이 등록한대로 잘나오면 이상이 없는 것이다.
