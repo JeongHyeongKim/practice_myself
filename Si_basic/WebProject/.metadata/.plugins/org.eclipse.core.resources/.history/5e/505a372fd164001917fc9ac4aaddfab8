@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+	<body>
+		<!-- 태그에 직접 css적용하면 간단하게 처리할 때 직관적으로 좋지만, 동일한 태그에 적용할 때는 반복해서 코드가 드간다. -->
+		<h1 style="color:red; border:solid blue 5px;">css 직접 태그에 적용하기</h1>
+		
+		<h3 >집보내줘........</h3>
+		
+		<h1>css 직접 태그에 적용하기</h1>
+		
+	</body>
+</html>

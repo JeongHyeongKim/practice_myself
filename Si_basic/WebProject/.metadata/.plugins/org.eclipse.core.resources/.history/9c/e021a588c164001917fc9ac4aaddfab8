@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+	<body>
+		<h1>Form 양식</h1>
+		<form action="http://www.daum.net" method="get" novalidate="novalidate">
+			아이디  : <input type="text" id="id" name="id" placeholder="Please insert your id" required="required"/><br>
+			날짜 : <input type="date" name="birth"/><br>
+			이메일 : <input type="email" name="email"/>
+			
+			<fieldset>
+				<legend>성별</legend>
+				<input type="radio" name="gender">남자
+				<input type="radio" name="gender">여자
+			</fieldset>
+			<input type="submit" value="전송하기"/>
+		</form>
+
+	</body>
+</html>	

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+	<body>
+		<h3>순서있는 목차만들기</h3>
+		<ol>
+			<li>하낫</li>
+			<li>두울</li>
+			<li>세엣</li>
+		</ol>
+		<hr>
+		<h3>순서없는 목차만들기</h3>
+		<ol>
+			<li>하낫</li>
+			<li>두울</li>
+			<li>세엣</li>
+		</ol>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>200 OK</title>
+	</head>
+<body>
+	<h1>Difference between pre tag and xmp tag</h1>
+	<pre>
+		404 Not Found
+		<h3>403 Forbidden</h3>
+		you don't have permission in this file.
+	</pre>
+
+</body>
+</html>

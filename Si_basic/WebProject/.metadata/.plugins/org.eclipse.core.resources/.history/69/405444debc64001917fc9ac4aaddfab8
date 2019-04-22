@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+	<body>
+		<h3>순서있는 목차만들기</h3>
+		<!--  type="A | a | I | i | 숫자 -->
+		<ol type="I">
+			<li>동부리그</li>
+				<ul>
+					<li>보스턴</li>
+					<li>양키즈</li>
+					<li>디트로이트</li>
+				</ul>
+			<li>두울</li>
+			<li>세엣</li>
+		</ol>
+		<hr>
+		<h3>순서없는 목차만들기</h3>
+		<ul>
+			<li>하낫</li>
+			<li>두울</li>
+			<li>세엣</li>
+		</ul>
+	</body>
+</html>

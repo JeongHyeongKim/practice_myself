@@ -1,0 +1,24 @@
+		/*This area is permitted to only css*/
+		/* 1. 태그에 적용하기*/
+		h1,h3{color:red; border: double pink 5px;}
+		
+		/* 2. id로 적용하기*/
+		#a{color:green; font-style:italic;}
+		#aa{width:400px;}
+		
+		/* 3. class로 적용하기*/
+		.b{background-color:orange;}
+		.bb{font-family:궁서체;}
+		
+		/* 4. 특정 element의 하위 요소 찾기*/
+		div > p {background-color:skyblue;} /*div태그에 대해 직계의 하위요소 찾기*/
+		/*div p {background-color:skyblue;}*/ /*div태그 밑에 있는 모든 하위요소를 찾는다.*/
+		
+		/* 5. 속성으로 찾기 [] */
+		input[type="password"]{border:double red 5px;}
+		input[name$=d]{background-color:blue;} /* [$]표시는 특정단어로 끝나는 모든 단어를 검색할때 쓴다.*/
+		
+		div.test{} /*<div class="test">인 친구들을 찾는거 */
+		div .test{} /*<div>안에서 test클래스를 찾는거임 */
+		#a h2, div#b{} /* id가 a인 요소의 하위 요소중에 모든 h2태그 찾기 또는 div태그 속성에 id="b"인 놈을 찾기 */
+		

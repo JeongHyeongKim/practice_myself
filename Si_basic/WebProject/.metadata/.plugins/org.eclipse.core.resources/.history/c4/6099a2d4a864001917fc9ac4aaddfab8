@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>300 Parmently Moved</title>
+	</head>
+	
+	<body>
+		<h1>&lt;a&gt; 태그</h1>
+		<a href="http://www.naver.com">naver</a>
+		<a href="http_//www.daum.net">Daum</a>
+		<a href="http://www.google.com">google</a>
+	</body>
+</html>

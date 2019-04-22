@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>200 OK</title>
+	</head>
+<body>
+<!--
+	개행 : <br>
+	단락 구분 : <p>
+	*block 요소 : 기본적으러ㅗ 한 행을 다 차지하는 개행이 되는 요소들(p, div, h...)
+	*inline 요소 : 해당하는 영역만큼만 차지하는 요소 - 개행이 안된다 (a, span ...)
+	
+	*HTML은 시작 태그와 닫는 태그 한쌍으로 이루어짐
+	-> 만약에 요소 사이에 content가 없다면 시작 태그만 사용가능하다.
+	<p></p> or <p/>
+-->
+	<h1>Difference between pre tag and xmp tag</h1>
+	<pre>
+		404 Not Found
+		<h3>403 Forbidden</h3>
+		you don't have permission in this file.
+	</pre>
+
+</body>
+</html>

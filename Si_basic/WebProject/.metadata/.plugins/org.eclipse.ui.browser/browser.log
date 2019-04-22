@@ -1,0 +1,10 @@
+
+4월 22, 2019 10:31:24.51 NEW SESSION
+4월 22, 2019 10:31:24.51 [Parent 14684, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+4월 22, 2019 10:31:24.51 [Parent 14684, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+4월 22, 2019 10:31:24.52 [Child 17556, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+4월 22, 2019 10:31:24.52 [Child 17556, Chrome_ChildThread] WARNING: pi[Child 9148, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+4월 22, 2019 10:31:24.60 [Child 9148, Chrome_ChildThread] WARNING: pipe error: 109: file z:/bui[GPU 16368, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+4월 22, 2019 10:31:24.62 
+4월 22, 2019 10:31:24.62 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+4월 22, 2019 10:31:24.62 

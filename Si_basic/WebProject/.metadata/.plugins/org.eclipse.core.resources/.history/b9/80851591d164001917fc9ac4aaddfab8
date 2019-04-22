@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		/*This area is permitted to only css*/
+		/* 1. 태그에 적용하기*/
+		h1,h3{color:red; border: double pink 5px;}
+		/* 2. id로 적용하기*/
+		#a{color:green; font-style:italic;}
+	</style>
+</head>
+	<body>
+		<!-- 태그에 직접 css적용하면 간단하게 처리할 때 직관적으로 좋지만, 동일한 태그에 적용할 때는 반복해서 코드가 드간다. -->
+		<h1 style="color:red; border:solid blue 5px;">css 직접 태그에 적용하기</h1> <!--  직접 적용하는 태그가 우선순위기 때문에 결과는 밑에꺼랑 다르다. -->
+		
+		<h3 >집보내줘........</h3>
+		
+		<h1>css 직접 태그에 적용하기</h1>
+		
+	</body>
+</html>

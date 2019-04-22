@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Table Tag</title>
+	</head>
+	<body>
+		<h3>table 만들기</h3>
+		<table border="1" height="400" width="300" cellspacing="0">
+			<thead>
+				<tr>
+					<th>이름</th>
+					<th>나이</th>
+					<th>주소</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>갈매기</td>
+					<td>1</td>
+					<td>푸싼</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
+		<hr>
+		
+		<table border="1" cellpadding="10" align="center">
+			<caption><h3>가로셀 병합</h3></caption>
+			<tbody>
+				<tr>
+					<td>A</td>
+					<td>B</td>
+				</tr>
+				<tr>
+					<td colspan="2">C</td>
+					<!--<td>D</td>-->
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+
+		
+		<table border="1" cellpadding="10" align="center">
+			<caption><h3>세로셀 병합</h3></caption>
+			<tbody>
+				<tr>
+					<td rowspan="2">A</td>
+					<td>B</td>
+				</tr>
+				<tr>
+					<!-- <td>C</td> -->
+					<td>D</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		
+		<table border="1" cellpadding="10" align="center" style='text-align:center;'>
+			<caption><h3>test</h3></caption>
+			<tbody>
+				<tr>
+					<td colspan="3">A</td>
+
+				</tr>
+				<tr>
+					<td rowspan="3">B</td>
+					<td colspan="2">C</td>
+
+				</tr>
+				<tr>
+
+					<td>D</td>
+					<td>E</td>
+				</tr>
+				<tr>
+
+					<td>F</td>
+					<td>G</td>
+				</tr>
+				<tr>
+					<td rowspan="2">H</td>
+					<td colspan="2">I</td>
+
+				</tr>
+				<tr>
+					<td>J</td>
+					<td>K</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		
+	</body>
+</html>
