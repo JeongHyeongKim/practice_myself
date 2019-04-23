@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+	/*in-line요소에는 width, height가 적용이 되지 않는다.*/
+	/*in-line요소는 좌우 margin은 적용 되지만, 상하 margin은 적용이 안된다.*/
+		#a{background:red; width:100px; height:100px;
+		/*display:inline-block;*/ /*block|in-line|inline-block*/}
+		#b{background:green;}
+		#c{background:blue}
+		
+		.a{background:orange;width:100px;height:100px; display:inline}
+		.b{background:yellow; margin:20px}
+		.c{background:pink}
+	</style> 
+</head>
+<body>
+	<span id="a">span 1</span>
+	<span id="b">span 2</span>
+	<span id="c">span 3</span>
+  
+
+	<hr>
+	<div class="a">div 1</div>
+	<div class="b">div 2</div>
+	<div class="c">div 3</div>
+
+</body>
+</html>

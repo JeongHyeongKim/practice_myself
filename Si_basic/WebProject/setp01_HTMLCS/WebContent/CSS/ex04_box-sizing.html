@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		.a{background-color:yellow; width:300px; height:200px; border: red 20px solid; padding:10px;}
+		/*border를 사용하게 되면 내가 생각했던것 보다 크기가 더 커지는 현상이 있다.*/
+		/*실제 width크기 = width+padding+border-width*/
+		.b{background-color:pink; width:300px; height:200px; border: red 20px solid; padding:10px;
+		box-sizing:border-box;} /*content-border|border-box 크기맞춤?!?*/
+		/*When you add padding margin or border, your layouts get bigger and might mess up the whole design!
+		This is where the border-box comes into play!
+		This adds up padding margin and border with the height and width of an element!*/
+	</style>
+</head>
+
+<body>
+	<div class="a">box-sizing practice</div>
+	<div class="b">box-sizing practice</div>
+</body>
+
+</html>

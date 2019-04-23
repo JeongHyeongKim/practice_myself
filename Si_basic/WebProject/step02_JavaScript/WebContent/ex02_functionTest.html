@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function gugudan(){
+			// 1. text박스의 값을 가져온다. : window.document.폼이름.박스이름.속성
+			//var danValue=window.document.f.dan.value;
+			var a = document.f;
+			//var danValue = a.dan.value;
+			//원하는 element를 id로 찾기 (태그 찾기, 클래스찾기, id로 찾기)
+			var danValue = document.getElementById("dan").value; //객체를 찾아서 그 값을 호출하셈.
+			//alert(danValue)
+			console.log(danValue);
+			//값의 유효성을 체크해보자
+			if(danValue==""){
+				alert("숫자를 입력해주세요")
+				document.getElementById("dan").focus();
+				return;
+			}
+			
+			if(isNaN(danValue)){ //Not a Number?
+				alert("마! 숫자 입력해라!")
+				document.getElementById("dan").focus();
+				document.getElementById("dan").value="";
+				return;
+			}
+			/*
+				특정  element영역에 데이터 추가하는 방법
+				1. 폼양식인 경우 : 대상.value = 값
+				2. 일반 태그(h1, span, div...)인 경우 : 대상.innerText = 값       or     대상.innerHTML=값
+				
+				innerText => 태그가 있든 없든 그냥 전부 텍스트로 인식하여 때려 넣는다.
+				innerHTML => html태그를 인식하여 이를 적용하여 때려 넣는다.
+			*/
+			
+			//div태그 찾기
+			var divEle = document.getElementById("div");
+			divEle.innerHTML="<div>ㅎㅇ</div>";	
+			
+			
+			var string="<table>";
+			for(var i=1;i<10;i++){
+				string+="<tr>";
+				string+="<td>"+danValue+"*"+ i + " = " + (danValue*i) + "</td>";
+				string+="</tr>"
+				
+			}
+			string+="</table>"
+			console.log(string)
+			document.getElementById("div").innerHTML = string;
+			
+			
+		}
+	</script>
+</head>
+<body>
+	<form name="f">
+		<input type="text" placeholder="단을 입력하세요" name="dan" id="dan">
+		<input type="button" value="구구단" onclick="gugudan()"/>
+	</form>
+	
+	<div id="div" >　</div>
+</body>
+</html>

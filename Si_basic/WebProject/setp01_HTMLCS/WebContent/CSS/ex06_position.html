@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+	/*
+		position
+		1. absolute : 절대좌표로 이동한다. 원래 놓여야 할 위치와 상관없이 무조건  (0,0)의 위치에서부터 이동한다.
+		              absolute가 설정된 element 다음에 놓이게 되는 element는 absolute가 설정된 요소를 전혀 모른다.
+		              
+		2. relative : 상대좌표로 이동한다. 원래 놓여야 할 위치에서부터 이동한다. 다음에 놓이게 되는 요소는 relative가 설정된 요소가
+					     있다고 가정하고 이후의 위치에 배치된다.
+		z-index가 높은 값이 앞으로 나온다. 포지션이 없는 애들한테는 적용되지 않는다.
+	*/
+		div:nth-child(1){background:orange; width:200px;height:100px;}
+		div:nth-child(2){background:yellow; width:200px;height:100px;
+		top:30px;left:0px;position:relative; z-index:4}
+		div:nth-child(3){background:pink; width:200px;height:100px;
+		position:absolute; top:150px;left:50px; z-index:3}
+		h3{width:150px;height:200px;border:dashed 3px red; position: fixed; top:20px;right:10px;}
+	</style>
+</head>
+<body>
+	<div>div 1</div>
+	<div>div 2</div>
+	<div>div 3</div>
+	
+	<h3>오늘 본 상품</h3>
+	ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>ㅎㅇ</p>
+</body>
+</html>

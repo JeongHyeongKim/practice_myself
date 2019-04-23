@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		var arr1 = new Array();
+		var arr2 = new Array(3);
+		var arr3 = new Array("a","b","c","d");
+		var arr4 = ["갈","매","기"];
+		
+		//배열방의 값을 모두 출력해주는 함수 작성
+		function printArr(arr){
+			console.log("arr = " + arr);
+			console.log("arr.length" + arr.length);
+			for(var i=0;i<arr.length;i++){
+				console.dir(arr[i]);
+			}
+			
+			for(var a in arr){
+				console.dir(i+" = " + arr[i]);
+			}
+			
+			console.log("==============");
+		}
+		
+		//함수 호출
+		printArr(arr1);
+		printArr(arr2);
+		printArr(arr3);
+		printArr(arr4);
+		
+		arr4[1]=100;
+		arr4[6]="gd";
+		printArr(arr4);
+	</script>
+</head>
+<body>
+	
+	
+</body>
+</html>

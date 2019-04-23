@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		div{width:100px;height:200px;background:pink;overflow:auto; /*visible hidden auto scroll*/}
+		
+		img:nth-child(1){
+			visibility: visible; opacity:0.1; border-radius:80px;
+		}
+		img:nth-child(2){/*nth-child는 배치 순서대로 인식한다. 그런데 body안에서의 배치로 바뀌는 것이다.*/
+			display:none;
+		}
+		#a{
+		visibility: visible; opacity:0.1; border-radius:80px}
+		#b{
+		display:none}
+		
+		a:link{color:red}
+		a:visited{color:gray}
+		a:active{color:green}
+		a:hover{font-size:15px;text-decoration:line-through; color:blue;}
+	</style>
+</head>
+<body>
+	<div>점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 점심내놔라 </div>
+	<hr>
+	<img src="img/bin.jpg" id="a">현빈
+	
+	<hr>
+	<img src="img/bin.jpg" id="b"> 김원빈
+	
+	<hr>
+	<a href="http://www.naver.com"> 네이버</a> <p>
+	<a href="http://www.daum.net">다음</a> <p>
+	<a href="http://www.google.com">구글</a> <p>
+</body>
+</html>

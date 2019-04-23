@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript" src="common.js">
+	   // 자바스크립트 언어 - javascript 문법 적용
+	   // 화면 출력
+	   // 자바스크립트에서의 함수선언
+	   // 1. 명시적 선언 - function test(){}
+	   // 2. 함수 리터럴 선언 - var a = function(){}
+	   // var b = function test(){} 일때, test(); 호출이 되지 않는다.!
+	   // 3. 생성자 형식 함수 선언 var c = new Function(params...) {기능작성 return ~~~}
+	   // 
+	   document.write("<h2>졸려요~~</h2>");
+	   //함수선언 - 선안하고 필요할 때 호출을 통해서 실행한다.
+	   function test(){
+		   alert("나윤누나 자면 큰일나.")
+	   }
+	   //src쓰면 위같은 자바스크립트 코드를 사용 할 수 없다. 단, src에 여러개의 자바스크립트 파일을 등록하여 사용은 가능하다.
+	</script>
+</head>
+
+<body>
+	<h1 onmouseover="this.style.background:'pink';"
+	onmouseout="this.style.background:'white';">시작~!!</h1>
+	<script type="text/javascript">
+	   document.write("<h4 style='color:red'>끝입니다~</h4>");
+	</script>
+	<input type="button" value="님?" onclick="test()">
+	
+	<a href="#" onclick="test2()">화면 변경하즈아</a>
+	
+</body>
+</html>

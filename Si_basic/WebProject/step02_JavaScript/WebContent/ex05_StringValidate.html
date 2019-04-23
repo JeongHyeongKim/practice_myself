@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+  <title>Document</title>
+  <script>
+  	function IdCheck(a){ //변수갯수와 매개변수의 형이 상관 없어도 함수가 실행된다.
+  		//alert(a.value)
+  		var str="qwertyuiopasdfghjklzxcvbnm!@#"; // id에 허용 가능한 문자를 준비한다.
+  		
+  		for(var i=0;i<a.value.length;i++){
+  			//console.log(a.value.charAt(i));
+  			var ch = a.value.charAt(i);
+  			/* if(ch<"A" | ch>"z"){
+  				alert(ch + "는 잘못된 형식입니다.");
+  				return;
+  			}
+  		} */
+  			if(str.indexOf(ch)==-1){ //찾는 문자열이 없다면 -1를 출력한다.
+  				console.log(ch + "는 잘못된 형식입니다.");
+  				return;
+  			}
+  		}
+  	} // IdCheck End
+  	
+  	
+  	function ageCheck(th){
+  		if(isNaN(th.value)){
+  			console.log("숫자만 입력하세요.");
+  		}
+  	} // ageCheck End
+  	
+  	
+  	function emailCheck(th){
+  		//입력된 값에 @ 없으면 오류 메시지
+  		if(th.value.indexOf("@")==-1){
+  			console.log("정확한 이메일 형식을 입력해주세요");
+  		}
+  	}
+  	
+  	function juminCheck(th, fr){
+  		//console.log("aa");
+  		if(th.value.length==6){
+  			fr.jumin2.focus();
+  		}
+  	}
+  	
+  	function genderCheck(th, fr){
+  		//주민번호 첫글자 찾기
+  		var ch = th.value.charAt(0);
+  		
+  		if(ch=="1"|ch=="3"){
+  			fr.gender[0].checked=true;
+  		}else{
+  			fr.gender[1].checked=true;
+  		}
+  		
+  	}
+  </script>
+ 
+ </head>
+ <body>
+ <form name="form">
+   ID : <input type="text" name="id" onblur="IdCheck(this)" ><p> <!-- onblur->자기자신 객체가 커서를 잃었을때!  -->
+   age : <input type="text" name="age" onblur="ageCheck(this)"><p>
+   email : <input type="text" name="email" onblur="emailCheck(this)"><p>
+
+   <fieldset>
+     <legend>주민번호 </legend>
+	 <input type="text" size="6" name="jumin1"  onkeypress="juminCheck(this , form)"> - 
+	 <input type="text" size="7" name="jumin2" onblur="genderCheck(this, form)"
+	 > <p>
+     
+	 성별 : 
+	 <input type="radio" name="gender" value="남자"  >남자
+     <input type="radio" name="gender" value="여자">여자
+
+   </fieldset>
+
+
+ </form>
+  
+ </body>
+</html>
