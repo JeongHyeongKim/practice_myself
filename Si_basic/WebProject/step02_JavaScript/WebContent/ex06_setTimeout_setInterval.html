@@ -30,6 +30,12 @@
 		    	if(hour<10){
 		    		hour="0"+hour;
 		    	}
+		    }else{
+		    	divide="AM";
+		    	
+		    	if(hour<10){
+		    		hour="0"+hour;
+		    	}
 		    }
 			var text = document.getElementById("clock");
 			text.value=hour+"시 "+minute+"분 "+second+"초 "+divide;
