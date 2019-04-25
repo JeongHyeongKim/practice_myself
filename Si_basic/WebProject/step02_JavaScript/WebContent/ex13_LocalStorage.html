@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   #result{
+      width: 500px;
+      height: 300px;
+      border: 2px red solid;
+      margin-top: 20px;
+   }
+</style>
+<script type="text/javascript">
+   // 저장된 정보 가져오기
+   function getStorageLoading(){
+	   var str="";
+      for(var i=0; i<localStorage.length; i++){
+         var key=localStorage.key(i);
+         var value=localStorage[key];
+         str += key+" = "+value+"<br>";
+      }
+      document.getElementById("result").innerHTML = str;
+   } //화면갱신 function
+   
+   // window.onload
+   onload=function(){
+      //alert("시작~");
+      document.getElementById("save").onclick=function(){
+         var skey=document.getElementById("s_key").value;
+         var svalue=document.getElementById("s_value").value;
+         
+         // 저장
+         localStorage.setItem(skey, svalue);
+         document.getElementById("s_key").value="";
+         document.getElementById("s_value").value="";
+         document.getElementById("s_key").focus();
+         getStorageLoading();
+      }
+      document.getElementById("reset").onclick=function(){
+         localStorage.clear();
+         getStorageLoading();
+      }
+      
+      getStorageLoading();
+   }
+   
+   // 이벤트 등록 -> 이벤트 대상.on이벤트종류=함수 이름
+   
+</script>
+</head>
+<body>
+<h1>localStorage Test</h1>
+<form>
+key : <input type="text" name="s_key" id="s_key">
+value : <input type="text" name="s_value" id="s_value"><br>
+<input type="button" value="save" id="save">
+<button type="button" id="reset">reset</button>
+<div id="result"></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		/*
+			생성자 함수
+			function 함수이름(){
+				속성선언;
+				메소드 선언
+			}
+		
+			:필요할 때 생성해서 사용한다 - new 함수이름();
+			:함수이름의 첫글자는 대문자 권장
+		*/
+		
+		function Student(name, kor, eng, math){
+			//매개변수의 값을 외부에서도 사용 할 수 있도록 저장할거임!
+			this.stName=name;
+			//var stName=name;
+			this.stKor=kor;
+			this.stEng=eng;
+			this.stMath=math
+			
+			
+			//필요한 기능 메소드 선언
+			
+		} // this안쓰고 그냥 var라고 쓰면 다른 곳에서 쓸 수 없음! 즉, 캡슐화 되어 글로벌 영역에서 쓸 수가 없다.
+		/*
+			Student 생성자 함수가 공유하게 될 메소드를 프로토타입으로 선언하여 메모리 관리를 효율적으로 한다.
+		*/
+		//Student.prototype.getSum = function(){}
+				
+		Student.prototype.getSum=function(){
+			return this.stKor + this.stEng + this.stMath;
+		}
+		Student.prototype.getAvg=function(){
+			return this.getSum()/3;
+		}
+		Student.prototype.test=function(){
+			return this.stName + " | " + this.stKor + " | " + this.stEng + " | " + this.stMath + " | "
+					+ this.getSum() + " | " + this.getAvg();
+		}
+		
+		
+		//Student를 담을 배열 선언
+		var st=[];
+		st.push(new Student("갈매기", 100,100,100));
+		st.push( new Student());
+		st.push(new Student("무슨꿈이야", 100,90,80));
+		
+		
+		for(var i in st){
+			console.dir(i+" = " + st[i].test());
+		}
+		
+	</script>
+</head>
+
+<body>
+	
+</body>
+</html>

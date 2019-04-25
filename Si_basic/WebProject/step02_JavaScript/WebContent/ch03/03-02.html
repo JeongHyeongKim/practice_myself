@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<title>03-02</title>
+<script type="text/javascript">
+console.log(message("홍길동"));//3. 호이스팅 때문에 function으로 실행된다.
+var message = "안녕?"; //2. function이 우선이기 때문에 안녕이 알당되지 않는다.    4. 데이터 타입이 string으로 변환된다.
+console.log(message); // string값으로 변화되었기 때문에 function이 아닌 그냥 안녕을 출력된다.
+function message(name) { //1. 호이스팅에 의해  message변수에 function이 할당된다.
+    return "hello " + name;   
+}   
+</script>
+</head>
+<body>
+
+</body>
+</html>
