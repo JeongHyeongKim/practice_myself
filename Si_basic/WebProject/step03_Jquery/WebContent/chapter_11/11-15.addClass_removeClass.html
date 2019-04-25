@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+	.h1Css{background-color:yellow;border:1px solid red;}
+</style>
+<script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
+<script>
+	$(function(){
+		$("h1")
+		.mouseover(function(){
+			$(this).addClass("h1Css");
+		})
+		.mouseout(function(){
+			$(this).removeClass("h1Css");
+		});
+	})
+</script>
+</head>
+<body>
+<h1>
+	마우스를 올려보세요.
+</h1>   
+</body>
+</html>

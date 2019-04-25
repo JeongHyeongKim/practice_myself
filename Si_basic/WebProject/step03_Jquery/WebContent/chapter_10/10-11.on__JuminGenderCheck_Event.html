@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
+<script>
+	setInterval(function(){
+		//$().on("keyup",function(){}).on().on(); X
+		//$().(keyup:function(){}, keydown:function(){},)
+		//1. jumin1의 자리수가 6자리가 되면 커서이동, 숫자 유무체크
+		$("#jumin1").on("keypress", function(){
+			//숫자유무체크
+			if(isNaN($(this).val() )){
+				var text = $(this).val();
+				$(this).val(text.substr(0,text.length-1));
+				return;
+			}
+			
+			
+			if($(this).val().length==5){
+				$("#jumin2").focus();
+			}
+		});
+		
+		//2. jumin2에서 첫글자에 따라 성별을 체크한다, keydown이 될때마다 키보드에 입력된 키 값을 가져온다.
+		$("#jumin2").on({blur:function(){
+							var ch = $(this).val().charAt(0);
+							if(ch==1|ch==3){
+								$("#man").prop("checked",true);
+							}else{
+								$("#woman").prop("checked",true);
+							}
+						 },
+						 keydown:function(){
+							 console.log(event.keyCode);
+						 }
+		});
+	},50);
+		
+		
+	
+		
+		
+		
+
+</script> 
+</head>
+
+<body>
+  <h1>on 이벤트 </h1>
+  <h4>주민번호를 이용한 성별 체크</h4>
+  <form>
+   주민번호 : 
+<input type="text" id="jumin1" size="6"/> - <input type="text" id="jumin2" size="7" /> <p/>
+성별 : 
+<input type="radio" value="남자" id="man" disabled name="gender" checked="checked"> 남자
+<input type="radio" value="여자" id="woman" disabled name="gender"> 여자
+
+</form>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$("select[name=job]").change(function(){
+			//alert(1)
+			//선택된 값을 가져오기
+			alert("선택된 번지수 : " + this.selectedIndex)
+			if(this.selectedIndex!=0){ //선택된 번지수를 가져오기 - selectedIndex
+				var str="<h4>직업은 " + $(this).val() + "입니다.</h4>";
+				$("div").html(str);
+			}else{
+				$("div").html("");
+			}
+			//~.innerHTML -> $().html()
+			//~.innerText = $().text()
+		});
+	});
+</script>
+</head>
+<body>
+<h1>change 이벤트</h1>
+
+<form>
+     <select name="job">
+       <option value="0">--직업 선택--</option>
+	   <option value="회사원">회사원</option>
+	   <option value="개발자">개발자</option>
+	   <option value="전문직">전문직</option>
+	   <option value="회계사">회계사</option>
+	   <option value="의사">의사</option>
+	</select>
+ </form>	
+<div></div>
+</body>
+</html>
+
+
+
+
+
+

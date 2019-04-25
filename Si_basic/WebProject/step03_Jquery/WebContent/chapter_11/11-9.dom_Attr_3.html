@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+	div#bigImage{border:1px solid red;width:200px;height:200px;}
+	.asdf{width:200px;height:200px;}
+</style>
+<script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
+
+<script>
+$(function(){
+	$("img").on({
+		mouseover: function(){
+			
+			$("#bigImage").empty().append("<img src='" + $(this).attr("src") +"'"+"class='asdf'"+" />");
+		},
+		mouseout: function(){
+			$("#bigImage").empty();
+		}
+	});
+})
+</script>
+</head>
+<body>
+	
+<div id="product">
+    <img src="img/android.jpg" id="android" />
+    <img src="img/spring.jpg" id="spring"/>
+    <img src="img/unity.jpg" id="unity"/>  
+	  
+    <div id="bigImage"> </div>
+</div>
+</body>
+</html>

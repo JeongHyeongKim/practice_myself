@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
+
+<script>
+	$(function(){
+		$("input[type=text]")
+		.focus(function(){
+			$(this).css({border:"double 3px red", background : "blue", color:"white"});
+		})
+		.blur(function(){
+			//alert($(this).value);
+			console.log($(this).val()); //jQuery에서 input요소의 값을 조회, 변경할 때  val()를 쓴다.
+			console.log(this.value);
+			
+			
+			//text박스 값 지우기
+			//this.value="";
+			$(this).val("");
+		});
+	})
+	
+</script>
+</head>
+<body>
+<h1>focus 와 blur 이벤트</h1>
+
+<form>
+   이름 : <input type="text" name="name" >	
+ </form>	
+
+</body>
+</html>
+
+
+
+
+
+

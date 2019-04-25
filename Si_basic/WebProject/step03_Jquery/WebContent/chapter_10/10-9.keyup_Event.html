@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Insert title here</title>
+	
+	<script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
+	
+	<script>
+		$(function(){
+			$("#pwd").keyup(function(){
+				//div영역 지우기
+				$("#lblError").html("");
+			});
+			
+			$("#pwdConfirm").keyup(function(){
+				//pwd암호와 비교해서 일치여부 div영역 넣기
+				if($("#pwd").val()==$("#pwdConfirm").val()){
+					$("#lblError").html("ㅇㅇ");
+					
+				}
+				else{
+					$("#lblError").html("아니요 뚱인뒈요?");
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+  <h1>keyup 이벤트</h1>
+  <table style="border: 1px solid skyblue;">
+        <tr>
+            <td>암호:</td>
+            <td><input type="password" id="pwd" size="20"></td>
+        </tr>
+        <tr>
+            <td>암호확인:</td>
+            <td><input type="password" id="pwdConfirm" size="20"></td>
+        </tr>
+  </table>
+    <div id="lblError">암호를 입력하시오.</div>
+
+</body>
+</html>
+
+
+
+
+

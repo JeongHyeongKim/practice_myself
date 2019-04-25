@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
+
+<script>
+	$(function(){
+		/*
+			$().이벤트종류(function(){}); //정적요소 이벤트 등록
+			$().on("이벤트종류",funtion(){});
+		*/
+		
+		$("#chkAll").on("click",function(){
+			//alert(this.checked)
+			
+			$(":checkbox").prop("checked", this.checked);
+			
+			if($("span").text()=="전체선택"){
+				$("span").text("전체해지");
+			}else{
+				$("span").text("전체선택");
+			}
+		});
+	});
+</script>
+</head>
+
+<by>
+  <h1>on 이벤트 </h1>
+  <h4>checkbox를 이용한 전체 선택</h4>
+  <form>
+    <input type="checkbox" id="chkAll" /><span>전체선택</span><p>
+       <div id="subCheck">
+        <input type="checkbox" checked="checked" />C#
+        <input type="checkbox"  />HTML5
+        <input type="checkbox"  />Java
+        <input type="checkbox"  />JQuery
+      </div>
+</form>
+</body>
+</html>
+
+
+
+
+

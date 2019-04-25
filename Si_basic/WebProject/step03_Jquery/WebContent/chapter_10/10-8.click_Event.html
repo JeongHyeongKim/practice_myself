@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
+
+<script>
+ 	/* $(function(){
+ 		$("input[type=button]").click(function(){
+ 			alert(1)
+ 		});
+ 	}) */
+ 	
+ 	$(function(){
+ 		$(":button").click(function(){
+ 			
+ 			//jQuery 반복문
+ 			/*
+ 				$(selector).each(function(index,item){});  => 마크업을 통해 반복문 돌릴때
+ 				
+ 				$.each(반복대상, function(index,item){});  => js에서 선언해서 반복문을 돌릴때
+ 			*/
+ 			var strHobby="취미 : ";
+ 			$(":checkbox:checked").each(function(index,item){
+ 				console.log(index+" = "+item.value/*this.value, $(this).val()*/)
+ 				strHobby+=item.value+" ";
+ 			});
+ 			
+ 			$("div").html(strHobby);
+ 			
+ 			var strSex="<br>성별 : ";
+ 			$(":radio:checked").each(function(index,item){
+ 				console.log(index+" = "+item.value/*this.value, $(this).val()*/)
+ 				strSex+=item.value+" ";
+ 			});
+ 			
+ 			$("div").html(strHobby+strSex);
+ 			
+ 			//alert($(":checkbox:checked").val())
+ 			//alert($(":radio:checked").val())
+ 		});
+ 	})
+	
+	
+</script>
+</head>
+
+<body>
+	<h1>click 이벤트</h1>
+<form>
+	취미 : 
+	   <input type="checkbox"  name="hobby" value="등산">등산
+	   <input type="checkbox"  name="hobby" value="낚시">낚시
+	   <input type="checkbox"  name="hobby" value="수영">수영
+	<p/>
+	성별 : 
+	 <input type="radio" name="gender" value="남자"/> 남자
+	 <input type="radio" name="gender" value="여자"/> 여자
+	
+	 <input type="button" value="확인"  />
+ </form>	
+<h2>선택 결과</h2>
+<div></div>
+
+</body>
+</html>
+
+
+
+
+

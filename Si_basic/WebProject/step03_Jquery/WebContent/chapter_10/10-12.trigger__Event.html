@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Insert title here</title>
+		<style>
+             button { margin: 10px;}
+            
+            div {
+                color: blue;
+                font-weight: bold;
+            }
+            
+            span {
+                color: red;
+            }
+        </style>
+        <script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
+
+		 <script>
+		 $(function(){
+			 $("button:first").click(function(){
+				 //alert(1)
+				 increment($("span:first"));
+			 });
+			 $("button:last").click(function(){
+				 //alert(2)
+				 increment($("span:last"));
+				 
+				 //trigger는 이벤트가 발생할 때 다른이벤트 호출해줌!!
+				 $("button:first").trigger("click");
+			 });
+			 
+			 //버튼을 클릭했을때 span의 데이터를 읽어서 +1을 하고 다시 저장하는 함수
+			 function increment(obj){
+				 //alert(obj.text())
+				 obj.text(parseInt(obj.text())+1);
+			 }
+		 })
+
+           
+        </script>
+        
+    </head>
+    <body>
+    	<h1>trigger 함수 </h1>
+        <button>Button #1</button>
+        <button>Button #2</button>
+        <div>
+            <span>0</span>
+            Button #1 clicks.
+        </div>
+        <div>
+            <span>0</span>
+            Button #2 clicks.
+        </div>
+       
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+	img{width:50px;height:40px}
+</style>
+<script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
+ 
+ <script type="text/javascript">
+  	$(function(){
+  		//h3에 백그라운드를 모두 다르게 설정한다.
+  		//$("h3").css("background","red");
+  		 var color = ["red", "green", "blue", "pink"];
+  		$("h3").each(function(index,item){
+  			$(this).css("background",color[index]);
+  		});
+  		
+  		var img = "<img src='img/android.jpg'>";
+  		
+  		$("#pre").click(function(){
+  			$(".a").prepend(img);
+  		});
+  		
+		$("#app").click(function(){
+			$(".b").append(img);
+		});
+		$("#before").click(function(){
+			$(".c").before(img);
+		});
+		$("#after").click(function(){
+			$(".d").after(img);
+		}); //before after는 글에다가 이어쓰는게 아니고 위아래에다가 합쳐진다.
+	
+  	})
+ </script>
+
+</head>
+<body>
+	<input type="button" id="pre" value="prepend"/>
+	<input type="button" id="app" value="append"/>
+	
+    <input type="button" id="before" value="before"/>
+	<input type="button" id="after" value="after"/>
+	
+	<h3 class="a">prepend 영역</h3>
+	<h3 class="b">append 영역</h3>
+	<h3 class="c">prependTo 영역</h3>
+	<h3 class="d">appendTo 영역</h3>
+</body>
+</html>

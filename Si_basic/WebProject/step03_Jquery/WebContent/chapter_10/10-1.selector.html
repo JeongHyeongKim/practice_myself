@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.4.0.min.js"></script>
+<script>
+ 
+	$(function(){
+		alert("zsfdsfdsfafdfdsfdsafdsa")
+		
+		/* jquery 문법
+			$(selector).속성
+			$(selector).메소드();
+		*/
+		//$("*").css("color","red");
+		$("li,h3").css("fontFamily","궁서체")
+		$(".div").css("color","blue").css("border","pink double 5px").css("font-family","궁서체");
+		
+		$("#tag").css({color:"red", textDecoration:"underline"});
+	});
+</script>
+
+</head>
+<body>
+	
+<h3>jQuery 기본 selector</h3>
+<h4>웹 프로그래밍</h4>
+<div class="div">
+	<ol>
+     	<li>jsp</li>
+		<li id="tag">javaScript</li>
+		<li>jQuery</li>
+		<li>Ajax</li>
+	</ol>
+</div>
+	
+
+</body>
+</html>
