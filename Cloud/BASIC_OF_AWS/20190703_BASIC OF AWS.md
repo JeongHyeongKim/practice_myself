@@ -38,7 +38,9 @@
 
 ### 4. Snowball
 > 페타바이트에 이르는 데이터를 빠른 속도로 송수신 하는데 특화된 데이터 전송 솔루션이다. 256비한다.  AES로 암호화하여 송수신 Snowball Edge를 사용하면 네트워크 연결이 불안한 edge에서도 aws cloud를 로컬로 이용 할 수 있다 (찾아보니 엣지 디바이스를 배달해준다고 함).
+
 <br>
+
 ### 5. CloudFront
 > 일종의 캐시서버 역할을 하며, Region의 Edge Location에서 content를 캐싱한다. 사용자가 어떤 자원을 요청하였을 때, CloudFront에 해당 자원을 캐싱 하였다면, 캐싱된 자원을 전송하며, 없으면 오리진서버에 자원을 요청하여 사용자에게 전송 후 해당 데이터를 캐싱한다. 이러한 방법을 통해 지연시간을 줄여 빠른 컨텐츠 제공에 도움이 된다.
 
@@ -60,7 +62,7 @@ CloudFront에서 사용자에게 콘텐츠를 제공하는 방법은 다음과 �
 	        
 	    c.  오리진에서 첫 번째 바이트가 도착하면 CloudFront가 파일을 사용자에게 전달하기 시작합니다. CloudFront는 다음에 다른 사용자가 해당 파일을 요청할 때 엣지 로케이션의 캐시에 파일을 추가합니다.
 
-- 출처[https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/HowCloudFrontWorks.html](https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/HowCloudFrontWorks.html)
+- 출처 : [https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/HowCloudFrontWorks.html](https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/HowCloudFrontWorks.html)
 
 
 ## AWS Database
@@ -184,6 +186,5 @@ CloudFront에서 사용자에게 콘텐츠를 제공하는 방법은 다음과 �
 
 ### 6.  QuickSight
 > 분석 된 것들을 가시적으로 보여주는 서비스
-
 
 
