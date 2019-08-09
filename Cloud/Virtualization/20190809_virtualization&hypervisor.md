@@ -45,5 +45,5 @@ Type 2
 Hardware에 OS를 설치하고, 그 위에 Hypervisor를 설치한다.
 OS가 Hardware를 관리하기 때문에 DOM0가 필요없다. 그러나 OS위에 Hypervisor가 구동되고 그 위에 가상화가 이루어 지는 방식이기 때문에 Overhead가 크다.
 
-![type2](./../../img/virtualization/type1.png)
+![type2](./../../img/virtualization/type2.png)
 
