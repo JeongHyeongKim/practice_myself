@@ -24,7 +24,7 @@ Type 1 (Native or Bare-Metal Hypervisor)
 
 <br><br>
 ![Full-Virtualiztion](./../../img/virtualization/full.JPG)
-사진 출처 : [https://blog.naver.com/alice_k106/220218878967](https://blog.naver.com/alice_k106/220218878967)
+[https://blog.naver.com/alice_k106/220218878967](https://blog.naver.com/alice_k106/220218878967) -> 사진 출처 (Alice님 Blog)
 
 
  - ### Para-Virtualization (반가상화)
@@ -35,7 +35,7 @@ Type 1 (Native or Bare-Metal Hypervisor)
 
 <br><br>
 ![Para-Virtualiztion](./../../img/virtualization/para.JPG)
-사진 출처 : [https://blog.naver.com/alice_k106/220218878967](https://blog.naver.com/alice_k106/220218878967)
+[https://blog.naver.com/alice_k106/220218878967](https://blog.naver.com/alice_k106/220218878967) -> 사진 출처 (Alice님 Blog)
 
 
 
