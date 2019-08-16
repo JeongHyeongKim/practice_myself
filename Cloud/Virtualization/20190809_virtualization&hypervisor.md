@@ -21,16 +21,21 @@ Type 1 (Native or Bare-Metal Hypervisor)
 	> 로마에 가면 로마법을 따르는 것 처럼, 각 OS는 고유의 규칙을 가지고 있고 같은 것을 표현하는 방식도 OS마다 틀리다. 각기 다른 표현을 Hypervisor(엄밀히 말하면 DOM0)가 핸들링하여 Hardware가 알아 먹을 수 있는 표현으로 변환 한 다음, Hardware에게 전달한다.
 
 
+
+<br><br>
 ![Full-Virtualiztion](./../../img/virtualization/full.JPG)
-사진 출처 : [https://blog.naver.com/alice_k106/220218878967](https://blog.naver.com/alice_k106/220218878967)
+[https://blog.naver.com/alice_k106/220218878967](https://blog.naver.com/alice_k106/220218878967) -> 사진 출처 (Alice님 Blog)
 
 
  - ### Para-Virtualization (반가상화)
 	>전가상화에서는 Hypervisor(엄밀히 말하면 DOM0)가 각기 다른 표현을 번역하여 Hardware에 전달하였지만, 반가상화에서는 표현하는 사람이 직접 하드웨어가 알아먹게 전달하는 방식(Hyper-Call)이다. 즉, 우리가 영어권으로 여행가면 한국어를 안쓰고 영어를 사용하여 대화하는 것과 마찬가지다. 
 	 하지만, 기본적으로 커널에는 Hyper-Call에 대한 정보가 없다. 그래서 가상 OS의 커널을 직접 수정해야하는 단점이 있다. 그러나 DOM0를 거치는 횟수가 줄기 때문에 전가상화에 대비하여 좋은 퍼포먼스를 보인다.
 
+
+
+<br><br>
 ![Para-Virtualiztion](./../../img/virtualization/para.JPG)
-사진 출처 : [https://blog.naver.com/alice_k106/220218878967](https://blog.naver.com/alice_k106/220218878967)
+[https://blog.naver.com/alice_k106/220218878967](https://blog.naver.com/alice_k106/220218878967) -> 사진 출처 (Alice님 Blog)
 
 
 
@@ -40,5 +45,5 @@ Type 2
 Hardware에 OS를 설치하고, 그 위에 Hypervisor를 설치한다.
 OS가 Hardware를 관리하기 때문에 DOM0가 필요없다. 그러나 OS위에 Hypervisor가 구동되고 그 위에 가상화가 이루어 지는 방식이기 때문에 Overhead가 크다.
 
-![type2](./../../img/virtualization/type1.png)
+![type2](./../../img/virtualization/type2.png)
 
