@@ -1,0 +1,13 @@
+package com.jeonghyeong;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AmazonSesTestApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AmazonSesTestApplication.class, args);
+	}
+
+}
